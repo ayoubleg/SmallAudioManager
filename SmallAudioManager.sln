@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallAudioManager", "ConsoleApp1\SmallAudioManager.csproj", "{5B87707A-E131-4FB5-8C32-A8EE98A08715}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B87707A-E131-4FB5-8C32-A8EE98A08715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B87707A-E131-4FB5-8C32-A8EE98A08715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B87707A-E131-4FB5-8C32-A8EE98A08715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B87707A-E131-4FB5-8C32-A8EE98A08715}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37522186-0A8B-4722-AF7D-027F05A2ABF8}
+	EndGlobalSection
+EndGlobal
