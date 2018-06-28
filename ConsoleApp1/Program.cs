@@ -18,7 +18,8 @@ namespace SmallAudioManager
             System.Console.WriteLine("or " + System.AppDomain.CurrentDomain.FriendlyName + " <API-Action>");
             System.Console.WriteLine("--------------------------------------");
             System.Console.WriteLine(">Device Name = Input OR Output Device");
-            System.Console.WriteLine(">Action = Mute, Toggle, +, -, plus, minus, +<val>, -<val>");
+            System.Console.WriteLine(">Action = Mute, Toggle, +, -, plus, minus, +<val>, -<val> or <val>");
+            System.Console.WriteLine(">val = -100 to 100");
             System.Console.WriteLine(">Action-Val = intval or bool for Mute");
             System.Console.WriteLine("----                              ----");
             System.Console.WriteLine(">API-Action = API-ListAll, API-ListInputs or API-ListOutputs");
@@ -57,7 +58,7 @@ namespace SmallAudioManager
                         System.Console.WriteLine("Press a key to continue ...");
                         System.Console.ReadKey();
                     }
-                    if ((args[1].StartsWith("+") || args[1].StartsWith("-")) && args.Length == 2)
+                    if (int.TryParse(args[1], out int tmp) && args.Length == 2)
                     {
                         int val;
                         if (int.TryParse(args[1], out val))
