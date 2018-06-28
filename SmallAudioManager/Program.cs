@@ -5,15 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using AudioSwitcher.AudioApi.CoreAudio;
+using System.Runtime.InteropServices;
 
 namespace SmallAudioManager
 {
     class Program
     {
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool AllocConsole();
+
         static public CoreAudioController controller = new CoreAudioController();
 
         static int print_usage()
         {
+            AllocConsole();
             System.Console.WriteLine("usage : " + System.AppDomain.CurrentDomain.FriendlyName + " <Device_Name> <Action> <Action-Val>");
             System.Console.WriteLine("or " + System.AppDomain.CurrentDomain.FriendlyName + " <API-Action>");
             System.Console.WriteLine("--------------------------------------");
@@ -30,6 +36,7 @@ namespace SmallAudioManager
 
         static int API_List(string Type)
         {
+            AllocConsole();
             IEnumerable<CoreAudioDevice> Target;
             if (Type.Equals("API-ListInputs"))
                 Target = controller.GetPlaybackDevices();
@@ -54,6 +61,7 @@ namespace SmallAudioManager
                 {
                     if (warning_flag)
                     {
+                        AllocConsole();
                         System.Console.WriteLine("Warning, multiple device with same name");
                         System.Console.WriteLine("Press a key to continue ...");
                         System.Console.ReadKey();
@@ -97,6 +105,7 @@ namespace SmallAudioManager
             }
             if (!warning_flag)
             {
+                AllocConsole();
                 System.Console.WriteLine("Warning, device not found ! Please use an <API-Action> to list your devices");
                 System.Console.WriteLine("Press a key to continue ...");
                 System.Console.ReadKey();
