@@ -12,3 +12,5 @@ SmallAudioManager.exe <API-Action>
 <Action-Val> ::= optional int (or bool for Mute)
 <API-Action> ::= API-ListAll, API-ListInputs or API-ListOutputs
 ```
+#Limitation
+Le programme est lent ... Voir pour changer de lib. ou créer un client/serveur efficace.
