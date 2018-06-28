@@ -14,15 +14,15 @@ namespace SmallAudioManager
 
         static int print_usage()
         {
-            System.Console.WriteLine("usage : " + System.AppDomain.CurrentDomain.FriendlyName + " <Device Name> <Action> <Action-Val>");
+            System.Console.WriteLine("usage : " + System.AppDomain.CurrentDomain.FriendlyName + " <Device_Name> <Action> <Action-Val>");
             System.Console.WriteLine("or " + System.AppDomain.CurrentDomain.FriendlyName + " <API-Action>");
             System.Console.WriteLine("--------------------------------------");
-            System.Console.WriteLine(">Device Name = Input OR Output Device");
-            System.Console.WriteLine(">Action = Mute, Toggle, +, -, plus, minus, +<val>, -<val> or <val>");
-            System.Console.WriteLine(">val = -100 to 100");
-            System.Console.WriteLine(">Action-Val = intval or bool for Mute");
+            System.Console.WriteLine("<Device_Name> ::= I/O Device Name");
+            System.Console.WriteLine("<Action> ::= Mute, Toggle, +, -, plus, minus, +<val>, -<val> or <val>");
+            System.Console.WriteLine("<val> ::= -100 to 100");
+            System.Console.WriteLine("<Action-Val> ::= optional int (or bool for Mute)");
             System.Console.WriteLine("----                              ----");
-            System.Console.WriteLine(">API-Action = API-ListAll, API-ListInputs or API-ListOutputs");
+            System.Console.WriteLine("<API-Action> ::= API-ListAll, API-ListInputs or API-ListOutputs");
             System.Console.WriteLine("Press a key to continue ...");
             System.Console.ReadKey();
             return (-1);
