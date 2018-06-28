@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallAudioManager", "ConsoleApp1\SmallAudioManager.csproj", "{5B87707A-E131-4FB5-8C32-A8EE98A08715}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallAudioManager", "SmallAudioManager\SmallAudioManager.csproj", "{5B87707A-E131-4FB5-8C32-A8EE98A08715}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
